@@ -28,22 +28,6 @@ public class BusStop extends Point {
 
     }
 
-    public static BusStop[] load() throws JSONException {
-//        JSONObject jsonObject = new JSONObject(data);
-        BusStop[] stops = new BusStop[10];
-        BusStop fakeStop = new BusStop();
-
-        SharedPreferences prefs = fakeStop.getPreferences(MODE_PRIVATE);
-        String names = prefs.getString("names", "");
-//        JSONObject jsonObject = new JSONObject(names);
-        Log.e("NastyNames", names);
-//        lat.setText(latSaved);
-//        String lngSaved = prefs.getString("lng", "None");
-//        lng.setText(lngSaved);
-//        Toast.makeText(this, "Text loaded", Toast.LENGTH_SHORT).show();
-        return stops;
-    }
-
     @Override
     public String toString() {
         return bus_stop_name + "\nlat: " + String.valueOf(lat) + "\nlng: " + String.valueOf(lng) + "\n" + String.valueOf(alarm_dist) + " м.";
